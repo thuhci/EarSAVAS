@@ -1,0 +1,90 @@
+Dataset:
+  seed: 0
+  audio_sr: 16000 # audio sampling rate
+  imu_sr: 100 # imu sampling rate
+  duration: 1 # second
+  num_mel_bins: 128 # number of mel bins
+  target_length: 128 # number of frames
+  freqm: 48 # frequency masking during training process
+  timem: 48 # time masking during training process
+  raw_data_dir: cut_data # data_path where you unzip our data
+  dataset_dir: dataset # data_path where you save the dataset
+  label_list: 
+    - 'Blow_Nose'
+    - 'Throat_Clear'
+    - 'Sniff'
+    - 'Sigh'
+    - 'Drink'
+    - 'Speech'
+    - 'Single_Cough'
+    - 'Continuous_Cough'
+    - 'Chewing'
+    - 'others'
+    - 'Blow_Nose_non_subject'
+    - 'Throat_Clear_non_subject'
+    - 'Sniff_non_subject'
+    - 'Sigh_non_subject'
+    - 'Drink_non_subject'
+    - 'Speech_non_subject'
+    - 'Single_Cough_non_subject'
+    - 'Continuous_Cough_non_subject'
+    - 'Chewing_non_subject'
+  training_user_list:
+    - 'user_19_1'
+    - 'user_23_1'
+    - 'user_17_1'
+    - 'user_5_1'
+    - 'user_8_1'
+    - 'user_16_1'
+    - 'user_17_2'
+    - 'user_8_2'
+    - 'user_24_1'
+    - 'user_19_2'
+    - 'user_18_2'
+    - 'user_13_1'
+    - 'user_25_2'
+    - 'user_4_1'
+    - 'user_18_1'
+    - 'user_12_1'
+    - 'user_10_2'
+    - 'user_14_2'
+    - 'user_11_1'
+    - 'user_24_2'
+    - 'user_7_1'
+    - 'user_9_2'
+    - 'user_5_2'
+    - 'user_11_2'
+    - 'user_21_1'
+    - 'user_10_1'
+    - 'user_22_2'
+    - 'user_6_2'
+    - 'user_22_1'
+    - 'user_3_2'
+  validation_user_list:
+    - 'user_16_2'
+    - 'user_9_1'
+    - 'user_21_2'
+    - 'user_15_2'
+  testing_user_list:
+    - 'user_6_1'
+    - 'user_15_1'
+    - 'user_14_1'
+    - 'user_12_2'
+    - 'user_7_2'
+    - 'user_25_1'
+    - 'user_4_2'
+    - 'user_3_1'
+
+Model:
+  task: ??? # select from two_channel_audio_and_imu/two_channel_audio/feedforward_audio/feedback_audio/imu_only/feedback_audio_and_imu/feedforward_audio_and_imu
+  device: ??? # select from cuda/cpu
+  lr: 1e-4
+  num_workers: 8
+  num_epochs: 50
+  batch_size: 128
+  n_print_steps: 100
+  weight_decay: 5e-7
+  single_modality_feature_size: 256
+  exp_dir: src_EarVAS/ # path where you save the metrics
+  training_subject_ratio: ???
+  samosa: ??? # select from True/False
