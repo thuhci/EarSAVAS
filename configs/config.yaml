@@ -86,5 +86,4 @@ Model:
   weight_decay: 5e-7
   single_modality_feature_size: 256
   exp_dir: src_EarVAS/ # path where you save the metrics
-  training_subject_ratio: ???
   samosa: ??? # select from True/False

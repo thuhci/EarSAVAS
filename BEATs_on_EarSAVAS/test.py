@@ -1,12 +1,13 @@
 import os
 from pytorch_lightning import Trainer
-from datamodules.ECS50DataModule import EarSAVASDataModule
+from datamodules.EarSAVASDataModule import EarSAVASDataModule
 from fine_tune.transferLearning import BEATsEarVASTransferLearningModel
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 model_dir = './lightning_logs'
-version_files = [os.path.join(model_dir, f'version_{idx}/checkpoints') for idx in range(21, 24)]
+version_list = ['feedback_audio_version', 'feedforward_audio_version', 'two_channel_audio_version']
+version_files = [os.path.join(model_dir, f'{version}/checkpoints') for version in version_list]
 version_file_paths = [os.path.join(item, file) for item in version_files for file in os.listdir(item)]
 
 for version_files in version_file_paths:
@@ -24,5 +25,5 @@ for version_files in version_file_paths:
     data_module.setup('test')
     test_dataloader = data_module.test_dataloader()
 
-    trainer = Trainer(gpus = [1], accelerator = 'gpu')
+    trainer = Trainer(gpus = [0], accelerator = 'gpu')
     trainer.test(model, dataloaders=test_dataloader)

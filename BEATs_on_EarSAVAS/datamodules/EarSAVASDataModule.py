@@ -90,8 +90,8 @@ class EarSAVASDataModule(LightningDataModule):
         testing_user_list: list,
         label_list: list,
         label_after_combine_list: list,
-        audio_path: str = "ad_16000_1_round2.pkl",
-        imu_path: str = "imu_100_1_round2.pkl",
+        audio_path: str = "ad_16000_1.pkl",
+        imu_path: str = "imu_100_1.pkl",
         batch_size: int = 8,
         **kwargs
     ):

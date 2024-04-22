@@ -10,7 +10,7 @@ trainer:
   num_nodes: 1
   num_processes: null
   devices: null
-  gpus: [1]
+  gpus: [0]
   auto_select_gpus: null
   tpu_cores: null
   ipus: null
@@ -154,8 +154,8 @@ data:
     - 'user_25_1'
     - 'user_4_2'
     - 'user_3_1'
-  audio_path: ad_16000_1_round2.pkl
-  imu_path: id_100_1_round2.pkl
+  audio_path: ad_16000_1.pkl
+  imu_path: id_100_1.pkl
   batch_size: 32
 finetuning:
   milestones: 0

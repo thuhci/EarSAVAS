@@ -30,12 +30,10 @@ def main(cfg):
     if Model_config.samosa:
         audio_dataset_path = f'ad_{audio_sr}_{snippet_duration}_samosa.pkl'
     else:
-        audio_dataset_path = f'ad_{audio_sr}_{snippet_duration}_round2.pkl'
+        audio_dataset_path = f'ad_{audio_sr}_{snippet_duration}.pkl'
 
-    if Model_config.samosa:
-        imu_dataset_path = f'id_{imu_sr}_{snippet_duration}.pkl'
-    else:
-        imu_dataset_path = f'id_{imu_sr}_{snippet_duration}_round2.pkl'
+    imu_dataset_path = f'id_{imu_sr}_{snippet_duration}.pkl'
+
     audio_dataset_path = os.path.join(dataset_dir, audio_dataset_path)
     imu_dataset_path = os.path.join(dataset_dir, imu_dataset_path)
 
