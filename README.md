@@ -74,7 +74,7 @@ We defined ’Activity Block’, a basic unit in which the users perform several
 
 #### Setup Environment and Prepare Data
 
-**Step 1. ** Build a conda environment where the **Python version is 3.8**, then clone and download this repository and set it as the working directory, create a virtual environment, and install the dependencies.
+**Step 1.** Build a conda environment where the **Python version is 3.8**, then clone and download this repository and set it as the working directory, create a virtual environment, and install the dependencies.
 
 ```
 cd EarSAVAS/
