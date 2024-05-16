@@ -164,4 +164,22 @@ Please enter the `BEATs_on_EarSAVAS` directory and operate according to the Read
 
 ### :page_with_curl: Citation
 
-To be updated.
+```
+@article{10.1145/3659616,
+author = {Zhang, Xiyuxing and Wang, Yuntao and Han, Yuxuan and Liang, Chen and Chatterjee, Ishan and Tang, Jiankai and Yi, Xin and Patel, Shwetak and Shi, Yuanchun},
+title = {The EarSAVAS Dataset: Enabling Subject-Aware Vocal Activity Sensing on Earables},
+year = {2024},
+issue_date = {May 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {8},
+number = {2},
+url = {https://doi.org/10.1145/3659616},
+doi = {10.1145/3659616},
+journal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
+month = {may},
+articleno = {83},
+numpages = {26},
+keywords = {Active Noise Cancelling Earables, Dataset, Deep Learning, Human Vocal Activity Recognition, Subject Awareness}
+}
+```
